@@ -24,9 +24,9 @@
   --breakpoint-xss: 320px;
   --breakpoint-xs: 375px;
   --breakpoint-sm: 425px;
-  --breakpoint-tablet: 30rem;
-  --breakpoint-laptop: 64rem;
-  --breakpoint-desktop: 80rem;
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1024px;
+  --breakpoint-desktop: 1440px;
 }
 
 body {

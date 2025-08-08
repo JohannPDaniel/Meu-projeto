@@ -14,7 +14,7 @@ export function AppLayout({ children }: AppLayoutProps) {
 				<NavBar />
 				<main className='flex-1 p-4 overflow-auto'>{children}</main>
 			</div>
-			<NavBarMobile />
+			<NavBarMobile isActivate />
 		</div>
 	);
 }
