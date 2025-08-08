@@ -13,15 +13,11 @@ import {
 	Shield,
 	Users,
 } from 'lucide-react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { MenuMobile } from './menuMobile';
 
-interface NavBarMobileProps {
-	isActivate: boolean;
-}
 
-export const NavBarMobile = ({ isActivate }: NavBarMobileProps) => {
+export const NavBarMobile = () => {
 	const pathname = usePathname();
 
 	const topRow = [
