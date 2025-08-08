@@ -73,14 +73,16 @@ export default function Usuarios() {
 								<span className='text-[14px] font-bold'>Senha</span>
 								<input
 									type='password'
+									name="password"
 									placeholder='********'
 									className='border border-gray-300 h-10 rounded-[14px] pl-3'
 								/>
 							</label>
 							<label className='w-full flex flex-col'>
-								<span className='text-[14px] font-bold'>Senha</span>
+								<span className='text-[14px] font-bold'>Confirmar senha</span>
 								<input
 									type='password'
+									name="confirmPassword"
 									placeholder='********'
 									className='border border-gray-300 h-10 rounded-[14px] pl-3'
 								/>
