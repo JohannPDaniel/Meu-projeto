@@ -33,30 +33,6 @@ export default function Dashboard() {
 						paragraphy2={ID.paragraphy2}
 					/>
 				))}
-				{/* <PainelDashboard
-					icon={DollarSign}
-					colorIcon='#0c3a97'
-					title='Descontos Concedidos'
-					number='R$ 1,2M'
-					paragraphy1='Total no mês atual'
-					paragraphy2='+15% vs mês anterior'
-				/>
-				<PainelDashboard
-					icon={Activity}
-					colorIcon='#0c3a97'
-					title='Transações com Promoção'
-					number='8.4k'
-					paragraphy1='Nos últimos 30 dias'
-					paragraphy2='+12% vs período anterior'
-				/>
-				<PainelDashboard
-					icon={TrendingUp}
-					colorIcon='#21c45d'
-					title='Taxa de Conversão'
-					number='67%'
-					paragraphy1='Campanhas aproveitadas'
-					paragraphy2='+3% vs semana anterior'
-				/> */}
 			</div>
 		</AppLayout>
 	);
