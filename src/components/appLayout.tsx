@@ -8,9 +8,9 @@ interface AppLayoutProps {
 
 export function AppLayout({ children }: AppLayoutProps) {
 	return (
-		<div className='w-full h-screen flex flex-col'>
+		<div className='w-full h-screen flex flex-col xss:mb-110 md:mb-0'>
 			<Header />
-			<div className='flex flex-1'>
+			<div className='flex flex-1 pt-16 z-0'>
 				<NavBar />
 				<main className='flex-1 p-8 overflow-auto'>{children}</main>
 			</div>

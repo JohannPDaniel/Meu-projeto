@@ -5,7 +5,7 @@ import gopaid from '../assets/gopaid.png';
 
 export const Header = () => {
 	return (
-		<header className='w-full h-[75px] border-b border-gray-300 flex items-center justify-between gap-2 md:px-[30px] xl:px-[250px]'>
+		<header className='fixed inset-x-0 top-0 z-50 backdrop-blur-md w-full h-16 bg-white/60 border-b border-gray-300 flex items-center justify-between gap-2 md:px-[30px] xl:px-[80px]'>
 			<div className='flex items-center gap-2'>
 				<Image
 					src={gopaid}
@@ -18,7 +18,7 @@ export const Header = () => {
 						style={{ color: '#113b94' }}>
 						GOPaid
 					</h1>
-					<p className='m-0 text-sm text-gray-400'>Motor de Promoções</p>
+					<p className='m-0 text-xs text-gray-400'>Motor de Promoções</p>
 				</div>
 			</div>
 

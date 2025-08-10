@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function SignIn() {
 	return (
-		<div className='w-full h-screen flex flex-col gap-5 items-center justify-center'>
+		<div className='w-full min-h-screen py-4 flex flex-col gap-5 items-center justify-center bg-[#fefeff]'>
 			<div className='max-w-[450px] flex items-center justify-center gap-2'>
 				<div className='flex flex-col items-end justify-end'>
 					<Image
@@ -24,8 +24,8 @@ export default function SignIn() {
 			</div>
 
 			<div
-				className='xss:w-[305px] xs:w-[355px] sm:w-[400px] md:w-[420px] lg:w-[450px] h-auto rounded-2xl flex flex-col items-center shadow-xl pb-2'
-				style={{ backgroundColor: '#fefdff' }}>
+				className='xss:w-[305px] xs:w-[355px] sm:w-[400px] md:w-[420px] lg:w-[450px] h-auto rounded-2xl flex flex-col items-center shadow-[0_2px_10px_rgba(0,0,0,0.1)] pb-2'
+				style={{ backgroundColor: '#ffff' }}>
 				<h1 className='text-2xl pt-6 font-[500]'>Acesso ao Sistema</h1>
 				<p className='text-sm text-gray-400 mt-1'>
 					Entre com suas credenciais para continuar

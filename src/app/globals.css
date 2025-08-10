@@ -13,19 +13,19 @@
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 @theme {
   --breakpoint-xss: 320px;
   --breakpoint-xs: 375px;
   --breakpoint-sm: 425px;
   --breakpoint-tablet: 768px;
-  --breakpoint-laptop: 1024px;
+  --breakpoint-laptop: 1023px;
   --breakpoint-desktop: 1440px;
 }
 

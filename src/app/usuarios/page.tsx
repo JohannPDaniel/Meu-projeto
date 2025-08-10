@@ -2,7 +2,12 @@
 
 import { useState } from 'react';
 import { AppLayout } from '../../components/appLayout';
-import { SelectStatus } from "../../components/selectStatus";
+import StatusSelect from "../../components/select";
+
+const OPTIONS = [
+	{ label: 'Ativo', value: 'ativo' },
+	{ label: 'Inativo', value: 'inativo' },
+];
 
 export default function Usuarios() {
 	const [phone, setPhone] = useState('');
@@ -31,8 +36,8 @@ export default function Usuarios() {
 			<div className='grid grid-cols-1 pb-6'>
 				<h1 className='text-2xl font-bold'>Cadastro de Usuário</h1>
 			</div>
-			<div className='w-full h-auto flex gap-6 '>
-				<div className='flex flex-col gap-4 border border-gray-300 w-200 h-auto rounded-[12px] p-6'>
+			<div className='w-full h-auto flex xss:flex-col xl:flex-row gap-6 '>
+				<div className='xss:w-full flex flex-col gap-4 border border-gray-300 w-200 h-auto rounded-[12px] p-6'>
 					<h1 className='text-2xl font-semibold'>Novo Usuário</h1>
 					<form className='flex flex-col gap-4'>
 						<label className='flex flex-col'>
@@ -53,7 +58,7 @@ export default function Usuarios() {
 								className='border border-gray-300 h-10 text-[14px] rounded-[12px] pl-4 focus:outline-none focus:ring-2 focus:ring-blue-500'
 							/>
 						</label>
-						<div className='flex items-end justify-center gap-4'>
+						<div className='flex xss:flex-col lg:flex-row items-end justify-center gap-4'>
 							<label className='flex flex-col w-full'>
 								<span className='text-[14px] font-bold'>Telefone</span>
 								<input
@@ -66,39 +71,44 @@ export default function Usuarios() {
 									maxLength={15}
 								/>
 							</label>
-							<SelectStatus />
+							<StatusSelect
+								name='status'
+								label='Status'
+								options={OPTIONS}
+								defaultValue='ativo'
+							/>
 						</div>
-						<div className='flex gap-4'>
+						<div className='flex xss:flex-col lg:flex-row gap-4'>
 							<label className='w-full flex flex-col'>
 								<span className='text-[14px] font-bold'>Senha</span>
 								<input
 									type='password'
-									name="password"
+									name='password'
 									placeholder='********'
-									className='border border-gray-300 h-10 rounded-[14px] pl-3'
+									className='flex items-center border border-gray-300 h-10 rounded-[14px] pl-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
 								/>
 							</label>
 							<label className='w-full flex flex-col'>
 								<span className='text-[14px] font-bold'>Confirmar senha</span>
 								<input
 									type='password'
-									name="confirmPassword"
+									name='confirmPassword'
 									placeholder='********'
-									className='border border-gray-300 h-10 rounded-[14px] pl-3'
+									className='border border-gray-300 h-10 rounded-[14px] pl-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
 								/>
 							</label>
 						</div>
-						<div className="flex justify-end">
+						<div className='flex justify-end'>
 							<button
 								type='submit'
-								className='bg-[#113b94] text-white px-4 py-2 rounded-[12px]'>
+								className='bg-[#113b94] cursor-pointer text-white px-4 py-2 rounded-[12px]'>
 								Cadastrar
 							</button>
 						</div>
 					</form>
 				</div>
 
-				<div className='border border-gray-300 w-200 h-40 rounded-[12px]'></div>
+				<div className='xss:w-full border border-gray-300 w-200 h-40 rounded-[12px]'></div>
 			</div>
 		</AppLayout>
 	);
