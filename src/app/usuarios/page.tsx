@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { AppLayout } from '../../components/appLayout';
-import StatusSelect from "../../components/select";
+import StatusSelect from '../../components/select';
 
 const OPTIONS = [
 	{ label: 'Ativo', value: 'ativo' },
@@ -108,7 +108,29 @@ export default function Usuarios() {
 					</form>
 				</div>
 
-				<div className='xss:w-full border border-gray-300 w-200 h-40 rounded-[12px]'></div>
+				<div className='xss:w-full h-112 flex flex-col gap-4 border border-gray-300 rounded-[12px] p-6'>
+					<h1 className='text-2xl font-semibold'>Perfis de Acesso (RBAC)</h1>
+
+					<ul className='list-disc marker:text-[16px] pl-4 text-[14px] text-gray-500'>
+						<li>
+							Administrador: total acesso, gestão de usuários e configurações.
+						</li>
+						<li>
+							Gerente de Campanhas: cria/edita, submete, visualiza relatórios de
+							campanhas.
+						</li>
+						<li>Aprovador: revisa, aprova/rejeita, solicita ajustes.</li>
+						<li>Auditor: leitura de relatórios e logs.</li>
+					</ul>
+
+					<div className='flex justify-end'>
+						<button
+							type='button'
+							className='cursor-pointer px-4 py-3 text-[14px] font-semibold rounded-[11px] bg-gray-100 hover:shadow-[0_2px_2px_rgba(0,0,0,0.1)]'>
+							Gerenciar Perfis
+						</button>
+					</div>
+				</div>
 			</div>
 		</AppLayout>
 	);
