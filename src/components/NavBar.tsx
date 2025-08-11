@@ -19,6 +19,9 @@ import { Menu } from './menu';
 export const NavBar = () => {
 	const pathname = usePathname();
 
+	// compara só o 1º segmento (mantém "Clientes" azul em /clientes/*)
+	const root = (p: string) => '/' + p.replace(/^\/+|\/+$/g, '').split('/')[0];
+
 	const menus = [
 		{
 			icon: Home,
@@ -30,8 +33,8 @@ export const NavBar = () => {
 			icon: Building2,
 			title: 'Clientes',
 			paragraphy: 'Gestão de empresas',
-			href: '/clientes',
-		},
+			href: '/clientes/lista',
+		}, // <-- direto na lista
 		{
 			icon: Monitor,
 			title: 'Terminais',
@@ -89,16 +92,14 @@ export const NavBar = () => {
 	];
 
 	return (
-		<>
-			<nav className='hidden md:flex md:w-[205px] lg:w-[220px] xl:w-[250px] h-full border-r border-gray-300 md:p-4 lg:px-4 lg:py-9 flex-col gap-3 relative z-0'>
-				{menus.map((menu) => (
-					<Menu
-						key={menu.href}
-						{...menu}
-						isActive={pathname === menu.href}
-					/>
-				))}
-			</nav>
-		</>
+		<nav className='hidden md:flex md:w-[205px] lg:w-[220px] xl:w-[250px] h-full border-r border-gray-300 md:p-4 lg:px-4 lg:py-9 flex-col gap-3 relative z-0'>
+			{menus.map((m) => (
+				<Menu
+					key={m.href}
+					{...m}
+					isActive={root(pathname) === root(m.href)} // ativa também em /clientes/novo, /clientes/xyz...
+				/>
+			))}
+		</nav>
 	);
 };
