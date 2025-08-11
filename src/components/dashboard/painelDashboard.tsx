@@ -18,7 +18,7 @@ export const PainelDashboard = ({
 	paragraphy2,
 }: PainelDashboardProps) => {
 	return (
-		<div className='w-full border border-gray-300 p-6 rounded-2xl'>
+		<div className='w-full border border-gray-300 p-6 rounded-2xl hover:shadow-lg transition-shadow duration-75'>
 			<div className='flex items-center justify-between'>
 				<h3 className='text-[12px] text-gray-500 font-black'>{title}</h3>
 				<Icon

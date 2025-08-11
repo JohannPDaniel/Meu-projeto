@@ -90,7 +90,7 @@ export const NavBar = () => {
 
 	return (
 		<>
-			<nav className='hidden md:flex md:w-[250px] lg:w-[220px] xl:w-[250px] h-full border-r border-gray-300 md:p-4 lg:px-4 lg:py-9 flex-col gap-3 relative z-0'>
+			<nav className='hidden md:flex md:w-[205px] lg:w-[220px] xl:w-[250px] h-full border-r border-gray-300 md:p-4 lg:px-4 lg:py-9 flex-col gap-3 relative z-0'>
 				{menus.map((menu) => (
 					<Menu
 						key={menu.href}
