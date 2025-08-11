@@ -37,7 +37,7 @@ export default function Dashboard() {
 				))}
 			</div>
 
-			<div className='grid grid-cols-2 gap-4 '>
+			<div className='grid md:grid-cols-1 lg:grid-cols-2 gap-4 '>
 				<div className='flex flex-col gap-4 border border-gray-300 p-6 rounded-xl'>
 					<div className='flex items-center gap-3 '>
 						<BarChart className='w-5 h-5 text-blue-600' />

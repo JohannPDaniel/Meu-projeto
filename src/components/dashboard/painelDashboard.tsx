@@ -32,7 +32,7 @@ export const PainelDashboard = ({
 			<div className='flex items-center justify-between'>
 				<p className='text-gray-400 text-[11px]'>{paragraphy1}</p>
 				<p
-					className={`text-[12px] bg-[#21c45d] text-white font-bold px-3 py-0.5 rounded-full`}>
+					className={`text-[12px] bg-[#21c45d] hover:bg-[#2752af] text-white font-bold px-3 py-0.5 rounded-full`}>
 					{paragraphy2}
 				</p>
 			</div>
