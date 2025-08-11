@@ -1,5 +1,5 @@
 import gopaid from '@/assets/gopaid.png';
-import { Lock, Mail, Shield, User } from 'lucide-react';
+import { Lock, Mail } from 'lucide-react';
 import Image from 'next/image';
 
 export default function SignIn() {
@@ -24,7 +24,7 @@ export default function SignIn() {
 			</div>
 
 			<div
-				className='xss:w-[305px] xs:w-[355px] sm:w-[400px] md:w-[420px] lg:w-[450px] h-auto rounded-2xl flex flex-col items-center shadow-[0_2px_10px_rgba(0,0,0,0.1)] pb-2'
+				className='xss:w-[305px] xs:w-[355px] sm:w-[400px] md:w-[420px] lg:w-[450px] h-auto rounded-2xl flex flex-col items-center shadow-[0_2px_10px_rgba(0,0,0,0.1)] pb-6'
 				style={{ backgroundColor: '#ffff' }}>
 				<h1 className='text-2xl pt-6 font-[500]'>Acesso ao Sistema</h1>
 				<p className='text-sm text-gray-400 mt-1'>
@@ -61,7 +61,7 @@ export default function SignIn() {
 					</button>
 				</form>
 
-				<div className='w-full mt-2 px-6 py-4 flex flex-col gap-3'>
+				{/* <div className='w-full mt-2 px-6 py-4 flex flex-col gap-3'>
 					<hr className='border-x border-gray-300' />
 					<p className='text-[14px] text-gray-500 text-center'>
 						Usuários demo para teste:
@@ -136,7 +136,7 @@ export default function SignIn() {
 							</h2>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 			<p className='text-[12px] xss:text-center xs:text-center text-gray-500'>
 				Sistema protegido por controle de acesso baseado em funções (RBAC)
