@@ -7,7 +7,7 @@ export const Contatos = ({ typeContato, required }: contatosProps) => {
 		<div className='w-full flex flex-col gap-3 border border-gray-300 rounded-lg p-4'>
 			<h3 className='text-[16px] font-bold'>{typeContato}</h3>
 
-			<div className='grid grid-cols-3 gap-4'>
+			<div className='grid lg:grid-cols-3 gap-4'>
 				<label className='flex flex-col gap-2'>
 					<span className='text-[14px] font-bold'>
 						Nome {required && <span className='text-red-500'>*</span>}

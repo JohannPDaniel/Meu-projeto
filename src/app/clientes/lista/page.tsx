@@ -9,11 +9,11 @@ export default function ListaPage() {
 				<input
 					type='text'
 					placeholder='Buscar por nome da empresa ou CNPJ'
-					className='text-[14px] border border-gray-300 w-full left-3 pl-10 py-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
+					className='xss:text-[11.5px] md:text-[14px]  border border-gray-300 w-full left-3 pl-10 py-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
 				/>
 			</div>
 
-			<div className='grid grid-cols-3 gap-4'>
+			<div className='grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4'>
 				<ListaClientes
 					empresa='Exevolt'
 					status='ativo'
