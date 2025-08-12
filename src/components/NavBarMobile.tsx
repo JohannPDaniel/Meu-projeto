@@ -1,28 +1,39 @@
 'use client';
-
 import {
-	BarChart2,
-	Building2,
-	CheckCircle,
-	CreditCard,
-	FileText,
 	Home,
+	Building2,
 	Monitor,
 	Palette,
-	Settings,
-	Shield,
+	CreditCard,
+	CheckCircle,
+	FileText,
 	Users,
+	Shield,
+	Settings,
+	BarChart2,
 } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { MenuMobile } from './menuMobile';
-
+// ...
 
 export const NavBarMobile = () => {
 	const pathname = usePathname();
 
+	const root = (p: string) => '/' + p.replace(/^\/+|\/+$/g, '').split('/')[0];
+
+	const isActive = (href: string) => {
+		// ativo quando é exatamente a rota OU começa com ela
+		// OU quando o "root" coincide (ex.: /clientes/novo marca /clientes/lista)
+		return (
+			pathname === href ||
+			pathname.startsWith(href + '/') ||
+			root(pathname) === root(href)
+		);
+	};
+
 	const topRow = [
 		{ icon: Home, href: '/dashboard' },
-		{ icon: Building2, href: '/clientes' },
+		{ icon: Building2, href: '/clientes/lista' },
 		{ icon: Monitor, href: '/terminais' },
 		{ icon: Palette, href: '/interface' },
 		{ icon: CreditCard, href: '/transacoes' },
@@ -45,7 +56,7 @@ export const NavBarMobile = () => {
 						key={i}
 						href={menu.href}
 						icon={menu.icon}
-						isActive={pathname === menu.href}
+						isActive={isActive(menu.href)}
 					/>
 				))}
 			</div>
@@ -56,7 +67,7 @@ export const NavBarMobile = () => {
 						key={i}
 						href={menu.href}
 						icon={menu.icon}
-						isActive={pathname === menu.href}
+						isActive={isActive(menu.href)}
 					/>
 				))}
 			</div>
