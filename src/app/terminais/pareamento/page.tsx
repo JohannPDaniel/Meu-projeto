@@ -36,7 +36,7 @@ export default function Pareamento() {
 				</small>
 
 				<button className='flex items-center justify-center gap-2 bg-[#889dc9] text-white text-[14px] font-bold px-6 py-2 rounded-lg'>
-					<Wifi className="xss:w-10 xs:w-7 sm:w-5 xss:h-10 xs:h-7 sm:w-5 text-white font-bold" />
+					<Wifi className="xss:w-10 xs:w-7 sm:w-5 xss:h-10 xs:h-7 sm:h-5 text-white font-bold" />
 					Iniciar Comunicação com Terminal
 				</button>
 			</form>
