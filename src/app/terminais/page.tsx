@@ -1,7 +1,5 @@
-import { AppLayout } from "../../components/appLayout";
+import { redirect } from 'next/navigation';
 
 export default function Terminais() {
-	return (
-		<AppLayout>Terminais</AppLayout>
-	);
+	redirect('/terminais/cadastrados');
 }

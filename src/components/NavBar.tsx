@@ -39,7 +39,7 @@ export const NavBar = () => {
 			icon: Monitor,
 			title: 'Terminais',
 			paragraphy: 'Controle de terminais',
-			href: '/terminais',
+			href: '/terminais/cadastrados',
 		},
 		{
 			icon: Palette,
