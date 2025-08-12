@@ -13,8 +13,8 @@ export default function Clientes({ children }: { children: React.ReactNode }) {
 			{/* Cabeçalho fixo */}
 			<div className='flex items-center justify-between'>
 				<div>
-					<h1 className='text-2xl font-bold'>Gestão de Clientes</h1>
-					<p className='text-sm text-gray-500'>
+					<h1 className='text-3xl font-bold'>Gestão de Clientes</h1>
+					<p className='text-md text-gray-500'>
 						Cadastro e gerenciamento de empresas/eletropostos
 					</p>
 				</div>
@@ -26,7 +26,7 @@ export default function Clientes({ children }: { children: React.ReactNode }) {
 			</div>
 
 			{/* Abas/botões fixos */}
-			<div className='w-full bg-gray-100 flex justify-center py-1 rounded-lg mt-4'>
+			<div className='w-full bg-gray-100 flex justify-center py-1 rounded-lg'>
 				<Link
 					href='/clientes/lista'
 					className={`w-full mx-1 py-1 rounded-lg font-bold text-[14px] text-center transition-colors

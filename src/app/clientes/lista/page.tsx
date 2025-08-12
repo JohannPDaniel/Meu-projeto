@@ -1,14 +1,5 @@
-import {
-	Building2,
-	CircleCheckBig,
-	MapPin,
-	Phone,
-	Search,
-	SquarePen,
-	Trash2,
-	Users,
-} from 'lucide-react';
-import { ListaClientes } from "../../../components/clientes/listaClientes";
+import { Search } from 'lucide-react';
+import { ListaClientes } from '../../../components/clientes/listaClientes';
 
 export default function ListaPage() {
 	return (
