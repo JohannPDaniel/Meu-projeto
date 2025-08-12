@@ -22,7 +22,7 @@ export default function Clientes({ children }: { children: React.ReactNode }) {
 				</div>
 				<Link
 					href='/terminais/cadastrados'
-					className='inline-flex items-center gap-2 bg-blue-900 text-white md:w-60 px-4 py-2 rounded-lg'>
+					className='inline-flex items-center gap-2 bg-blue-900 text-white md:w-55 lg:w-50 xl:w-45 px-4 py-2 rounded-lg'>
 					<Plus size={16} /> Novo Terminal
 				</Link>
 			</div>
