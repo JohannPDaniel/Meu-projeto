@@ -1,9 +1,17 @@
-import { AlertCircle, BarChart, CheckCircle, Clock3, Target, TrendingUp, Users } from 'lucide-react';
+import {
+	AlertCircle,
+	BarChart,
+	CheckCircle,
+	Clock3,
+	Target,
+	TrendingUp,
+	Users,
+} from 'lucide-react';
 import { AppLayout } from '../../components/appLayout';
+import { Campanhas } from '../../components/dashboard/campanhas';
 import { infoDashboard } from '../../components/dashboard/infoDashboard';
 import { PainelDashboard } from '../../components/dashboard/painelDashboard';
-import { Campanhas } from "../../components/dashboard/campanhas";
-import { RapidAction } from "../../components/dashboard/RapidAction";
+import { RapidAction } from '../../components/dashboard/RapidAction';
 
 export default function Dashboard() {
 	return (
@@ -91,16 +99,16 @@ export default function Dashboard() {
 				</div>
 			</div>
 
-			<div className='grid gap-4 border border-gray-300 p-6 rounded-[12px]'>
+			<div className='grid items-center gap-4 border border-gray-300 p-6 rounded-[12px]'>
 				<div className='flex items-center gap-3 '>
 					<TrendingUp className='w-5 h-5 text-green-500' />
 					<h1 className='text-[22px] font-bold'>Performance das Campanhas</h1>
 				</div>
 
-				<div className='w-full h-auto flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-xl p-45'>
+				<div className='min-w-full flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-xl xss:p-20 xs:p-30 sm:p-40 md:p-50 lg:p-60 xl:p-80'>
 					<BarChart className='w-15 h-15 text-gray-400' />
 					<h3 className='font-bold text-gray-500'>Gráfico de Performance</h3>
-					<p className='text-[14px] text-gray-400'>
+					<p className='text-[14px] text-center text-gray-400'>
 						Visualização detalhada das métricas em tempo real
 					</p>
 				</div>
