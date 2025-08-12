@@ -13,16 +13,16 @@ export default function Clientes({ children }: { children: React.ReactNode }) {
 			{/* Cabeçalho fixo */}
 			<div className='flex xss:flex-col xss:gap-4 md:flex-row md:gap-0 items-center justify-between'>
 				<div className='w-full'>
-					<h1 className='text-3xl xss:text-center md:text-start font-bold'>
+					<h1 className='text-2xl xss:text-center md:text-start font-bold'>
 						Gestão de Terminais
 					</h1>
-					<p className='text-md xss:text-center md:text-start text-gray-500'>
+					<p className='text-sm xss:text-center md:text-start text-gray-500'>
 						Cadastro, pareamento e controle de terminais
 					</p>
 				</div>
 				<Link
 					href='/terminais/cadastrados'
-					className='inline-flex items-center gap-2 bg-blue-900 text-white md:w-50 px-4 py-2 rounded-lg'>
+					className='inline-flex items-center gap-2 bg-blue-900 text-white md:w-60 px-4 py-2 rounded-lg'>
 					<Plus size={16} /> Novo Terminal
 				</Link>
 			</div>

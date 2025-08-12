@@ -11,22 +11,22 @@ export default function Clientes({ children }: { children: React.ReactNode }) {
 	return (
 		<AppLayout>
 			{/* Cabeçalho fixo */}
-			<div className='flex xss:flex-col xss:gap-4 md:flex-row md:gap-0 items-center justify-between'>
-				<div className="w-full">
-					<h1 className='text-3xl xss:text-center md:text-start font-bold'>Gestão de Clientes</h1>
-					<p className='text-md xss:text-center md:text-start text-gray-500'>
+			<div className='flex items-center justify-between'>
+				<div>
+					<h1 className='text-2xl font-bold'>Gestão de Clientes</h1>
+					<p className='text-sm text-gray-500'>
 						Cadastro e gerenciamento de empresas/eletropostos
 					</p>
 				</div>
 				<Link
 					href='/clientes/novo'
-					className='inline-flex items-center gap-2 bg-blue-900 text-white md:w-50 px-4 py-2 rounded-lg'>
+					className='inline-flex items-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-lg'>
 					<Plus size={16} /> Novo Cliente
 				</Link>
 			</div>
 
 			{/* Abas/botões fixos */}
-			<div className='w-full bg-gray-100 flex justify-center py-1 rounded-lg'>
+			<div className='w-full bg-gray-100 flex justify-center py-1 rounded-lg mt-4'>
 				<Link
 					href='/clientes/lista'
 					className={`w-full mx-1 py-1 rounded-lg font-bold text-[14px] text-center transition-colors
