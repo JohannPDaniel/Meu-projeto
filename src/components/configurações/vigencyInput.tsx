@@ -24,7 +24,7 @@ export function VigenciaInput({ valorExterno, text }: Props) {
 				min={0}
 				value={valor} // mostra o número vindo de fora, mas editável
 				onChange={handleChange}
-				className='border border-gray-300 rounded-xl py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
+				className='border border-gray-300 rounded-xl py-2 px-3 text-[14px] focus:outline-none focus:ring-2 focus:ring-blue-500'
 			/>
 		</label>
 	);
