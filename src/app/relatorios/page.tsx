@@ -59,7 +59,7 @@ export default function Relatorios() {
 											{ct.content2}
 										</td>
 										<td className='py-4 md:pr-0 lg:pr-3 text-right'>
-											<button className='px-3 py-2 bg-gray-100 rounded-xl text-[14px] font-bold hover:shadow-lg'>
+											<button className='px-3 py-2 bg-gray-100 rounded-xl text-[14px] font-bold hover:shadow-lg cursor-pointer'>
 												{ct.contentButton}
 											</button>
 										</td>

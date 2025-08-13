@@ -15,8 +15,8 @@ type Props = {
 };
 
 export default function StatusSelect({
-	name = 'status',
-	label = 'Status',
+	name,
+	label,
 	options,
 	defaultValue,
 	placeholder = 'Selecione...',
@@ -33,7 +33,7 @@ export default function StatusSelect({
 		<div className={`w-full ${className}`}>
 			<label
 				htmlFor={id}
-				className='mb-1 block text-sm font-medium text-gray-800'>
+				className='mb-1 block text-sm font-bold text-gray-800'>
 				{label}
 			</label>
 
@@ -41,7 +41,7 @@ export default function StatusSelect({
 			<input
 				type='hidden'
 				name={ name }
-				value={selected?.value ?? ''}
+				value={selected?.value ?? defaultValue}
 			/>
 
 			<Listbox
