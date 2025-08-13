@@ -22,11 +22,11 @@ export default function Seguranca() {
 						valorExterno={5}
 					/>
 
-					<div className='flex justify-end mt-3'>
-						<button className='bg-[#113b94] px-4 py-3 rounded-[10px] text-[14px] text-white font-bold'>
+					<form className='flex justify-end mt-3'>
+						<button type="submit" className='bg-[#113b94] px-4 py-3 rounded-[10px] text-[14px] text-white font-bold'>
 							Salvar
 						</button>
-					</div>
+					</form>
 				</div>
 				<div className='flex flex-col gap-3 border border-gray-300 rounded-xl p-6'>
 					<h1 className='text-2xl font-bold'>
@@ -37,11 +37,11 @@ export default function Seguranca() {
 
 					<RadioButton title='Permitir 2FA para todos os usuários' />
 
-					<div className='flex justify-end mt-3'>
-						<button className='bg-gray-300 px-4 py-3 rounded-[10px] text-[14px] text-black font-bold'>
+					<form className='flex justify-end mt-3'>
+						<button type="submit" className='bg-gray-300 px-4 py-3 rounded-[10px] text-[14px] text-black font-bold'>
 							Configurar Provedor
 						</button>
-					</div>
+					</form>
 				</div>
 			</div>
 		</AppLayout>
