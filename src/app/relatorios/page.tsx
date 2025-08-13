@@ -35,7 +35,7 @@ export default function Relatorios() {
 					<div className='overflow-x-auto'>
 						<table className='min-w-full'>
 							<thead>
-								<tr className='border-b border-gray-300'>
+								<tr className='border-b border-gray-300 hover:bg-gray-50'>
 									<th className='text-left text-[14px] text-gray-500 py-3 md:pl-0 lg:pl-3'>
 										Relatório
 									</th>
@@ -70,8 +70,10 @@ export default function Relatorios() {
 					</div>
 				</div>
 
-				<div className="group flex justify-end mt-3">
-					<button className="border border-gray-300 px-3.5 py-2.5 rounded-xl text-[14px] font-bold cursor-pointer hover:text-blue-900 hover:bg-blue-100 hover:shadow-lg">Exportar CSV</button>
+				<div className='group flex justify-end mt-3'>
+					<button className='border border-gray-300 px-3.5 py-2.5 rounded-xl text-[14px] font-bold cursor-pointer hover:text-blue-900 hover:bg-blue-100 hover:shadow-lg'>
+						Exportar CSV
+					</button>
 				</div>
 			</div>
 		</AppLayout>

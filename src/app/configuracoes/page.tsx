@@ -19,9 +19,9 @@ export default function Configuracoes () {
 	const [ativo, setAtivo] = useState(true);
 	return (
 		<AppLayout>
-			<h1 className='text-2xl font-bold'>Configurações do Sistema</h1>
+			<h1 className='text-2xl xss:text-center md:text-start font-bold'>Configurações do Sistema</h1>
 
-			<div className='grid xl:grid-cols-2 gap-4'>
+			<div className='grid lg:grid-cols-2 gap-4'>
 				<div className='flex flex-col gap-4 border border-gray-300 rounded-xl p-6'>
 					<h1 className='text-2xl font-bold'>Geral</h1>
 
@@ -65,7 +65,7 @@ export default function Configuracoes () {
 						<input
 							type='text'
 							placeholder='https://pos.suaempresa.com/webhooks/gopaid'
-							className='border border-gray-300 rounded-xl p-2 pl-3 text-[14px] focus:outline-none focus:ring-2 focus:ring-blue-500'
+							className='border border-gray-300 rounded-xl p-2 pl-3 xss:text-[13px] md:text-[14px] lg:text-[13px] xl:text-[14px] focus:outline-none focus:ring-2 focus:ring-blue-500'
 						/>
 					</label>
 					<label className='flex flex-col'>
@@ -75,7 +75,7 @@ export default function Configuracoes () {
 						<input
 							type='text'
 							placeholder='Parabéns! Você ganhou {{percent}}% de desconto.'
-							className='border border-gray-300 rounded-lg p-2 pl-3 text-[14px] focus:outline-none focus:ring-2 focus:ring-blue-500'
+							className='border border-gray-300 rounded-xl p-2 pl-3 xss:text-[13px] md:text-[14px] lg:text-[13px] xl:text-[14px] focus:outline-none focus:ring-2 focus:ring-blue-500'
 						/>
 					</label>
 
