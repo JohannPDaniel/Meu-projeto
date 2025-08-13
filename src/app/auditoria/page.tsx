@@ -6,7 +6,7 @@ export default function auditoria() {
 		<AppLayout>
 			<h1 className='text-2xl font-bold'>Auditoria do Sistema</h1>
 
-			<div className='flex sm:flex-col xl:flex-row gap-4'>
+			<div className='flex xss:flex-col xl:flex-row gap-4'>
 				<form className='flex flex-1 flex-col gap-4 border border-gray-300 rounded-xl p-6'>
 					<h1 className='text-xl font-bold'>Filtros</h1>
 
@@ -28,7 +28,7 @@ export default function auditoria() {
 					</label>
 					<label className='flex flex-col gap-2'>
 						<span className='text-[14px] font-bold'>Período</span>
-						<div className='flex gap-2'>
+						<div className='flex xss:flex-col sm:flex-row gap-2'>
 							<input
 								type='date'
 								placeholder='campaign, user, settings...'
