@@ -45,7 +45,7 @@ export const NavBar = () => {
 			icon: Palette,
 			title: 'Interface',
 			paragraphy: 'Config. visual',
-			href: '/interface',
+			href: '/interface/mensagem',
 		},
 		{
 			icon: CreditCard,

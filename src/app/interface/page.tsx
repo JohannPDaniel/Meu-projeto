@@ -1,7 +1,4 @@
-import { AppLayout } from "../../components/appLayout";
-
+import { redirect } from 'next/navigation';
 export default function Interface() {
-	return (
-		<AppLayout>Interface</AppLayout>
-	);
+	redirect('/interface/mensagem');
 }
