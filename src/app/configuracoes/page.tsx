@@ -1,4 +1,5 @@
 import { AppLayout } from '../../components/appLayout';
+import { VigenciaInput } from '../../components/configurações/vigencyInput';
 import StatusSelect from '../../components/select';
 
 const OPTIONS = [
@@ -32,16 +33,15 @@ export default function configuracoes() {
 						defaultValue='America/Sao_Paulo'
 					/>
 
-					<label className='flex flex-col'>
-						<span className='text-[14px] font-bold'>
-							Vigência padrão (dias)
-						</span>
-						<input
-							type='number'
-							min={0}
-							className='border border-gray-300 rounded-xl py-1.8 px-5 focus:outline-none focus:ring-2 focus:ring-blue-500'
-						/>
-					</label>
+					<VigenciaInput
+						text='Vigência padrão (dias)'
+						valorExterno={30}
+					/>
+
+					<VigenciaInput
+						text='Limite padrão de budget (R$)'
+						valorExterno={50000}
+					/>
 				</div>
 			</div>
 		</AppLayout>
