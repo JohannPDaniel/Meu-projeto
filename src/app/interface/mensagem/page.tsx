@@ -1,18 +1,10 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
 import { LimiteDeCaracteres } from '../../../components/interface/limiteDeCaracteres';
+import { useInterfaceConfig } from '../interface-config';
 
 export default function Mensagem() {
-	const [limit, setLimit] = useState(10); // controlado pelo range
-	const [message, setMessage] = useState(''); // texto digitado
-
-	// Corta o texto se o limite diminuir
-	useEffect(() => {
-		setMessage((prev) => (prev.length > limit ? prev.slice(0, limit) : prev));
-	}, [limit]);
-
-	const count = useMemo(() => message.length, [message]);
+	const { limit, setLimit, message, setMessage, count } = useInterfaceConfig();
 
 	const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
 		const next = e.currentTarget.value;
