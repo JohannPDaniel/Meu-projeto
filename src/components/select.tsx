@@ -1,14 +1,13 @@
 'use client';
-
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
-import { Fragment, useId, useMemo, useState } from 'react';
+import { Fragment, useEffect, useId, useMemo, useState } from 'react';
 
 export type StatusOption = {
 	label: string;
 	value: string;
-	count?: number; // badge
-	meta?: string; // texto auxiliar ao lado do label
+	count?: number;
+	meta?: string;
 	dividerAfter?: boolean;
 };
 
@@ -17,6 +16,8 @@ type Props = {
 	label?: string;
 	options: StatusOption[];
 	defaultValue?: string;
+	value?: string;
+	onChangeValueAction?: (value: string, option: StatusOption) => void; // <<— nome mudado
 	placeholder?: string;
 	className?: string;
 };
@@ -26,15 +27,35 @@ export default function StatusSelect({
 	label,
 	options,
 	defaultValue,
+	value,
+	onChangeValueAction,
 	placeholder = 'Selecione...',
 	className = '',
 }: Props) {
+	const id = useId();
+
+	const selectedFromValue = useMemo(
+		() => (value ? options.find((o) => o.value === value) ?? null : null),
+		[value, options]
+	);
 	const initial = useMemo(
 		() => options.find((o) => o.value === defaultValue) ?? null,
 		[options, defaultValue]
 	);
-	const [selected, setSelected] = useState<StatusOption | null>(initial);
-	const id = useId();
+	const [selected, setSelected] = useState<StatusOption | null>(
+		selectedFromValue ?? initial
+	);
+
+	useEffect(() => {
+		if (selectedFromValue) setSelected(selectedFromValue);
+	}, [selectedFromValue]);
+
+	const handleChange = (opt: StatusOption) => {
+		setSelected(opt); // para modo não-controlado
+		onChangeValueAction?.(opt.value, opt); // avisa o pai (client)
+	};
+
+	const hiddenValue = selected?.value ?? value ?? defaultValue ?? '';
 
 	return (
 		<div className={`w-full ${className}`}>
@@ -45,33 +66,27 @@ export default function StatusSelect({
 					{label}
 				</label>
 			)}
-
-			{/* valor para envio no form */}
 			<input
 				type='hidden'
 				name={name}
-				value={selected?.value ?? defaultValue ?? ''}
+				value={hiddenValue}
 			/>
-
 			<Listbox
 				value={selected}
-				onChange={setSelected}>
+				onChange={handleChange}>
 				<div className='relative w-full'>
-					{/* BOTÃO FECHADO (mostra meta e/ou count quando houver seleção) */}
 					<Listbox.Button
 						id={id}
 						className='relative w-full cursor-default rounded-xl border border-gray-300 bg-white py-2 pl-3 pr-10 text-left text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500'>
 						{selected ? (
 							<span className='flex min-w-0 items-center gap-2'>
 								<span className='truncate'>{selected.label}</span>
-
 								{selected.meta && (
 									<span className='shrink-0 text-gray-400'>
 										&bull;{' '}
 										<span className='text-gray-500'>{selected.meta}</span>
 									</span>
 								)}
-
 								{typeof selected.count === 'number' && (
 									<span className='shrink-0 inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-[12px] font-semibold text-gray-700'>
 										{selected.count}
@@ -83,13 +98,11 @@ export default function StatusSelect({
 								{placeholder}
 							</span>
 						)}
-
 						<span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3'>
 							<ChevronUpDownIcon className='h-5 w-5 text-gray-500' />
 						</span>
 					</Listbox.Button>
 
-					{/* DROPDOWN */}
 					<Transition
 						as={Fragment}
 						enter='transition ease-out duration-100'
@@ -127,13 +140,11 @@ export default function StatusSelect({
 														</span>
 													)}
 												</span>
-
 												{typeof opt.count === 'number' && (
 													<span className='inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-[12px] font-semibold text-gray-700'>
 														{opt.count}
 													</span>
 												)}
-
 												{isSelected && (
 													<span className='absolute inset-y-0 left-2 flex items-center'>
 														<CheckIcon className='h-5 w-5 text-blue-600' />
@@ -142,13 +153,11 @@ export default function StatusSelect({
 											</div>
 										)}
 									</Listbox.Option>
-
 									{opt.dividerAfter && (
 										<div className='my-1 mx-2 h-px bg-gray-200' />
 									)}
 								</Fragment>
 							))}
-
 							{options.length === 0 && (
 								<div className='rounded-lg px-3 py-2 text-gray-500'>
 									Nenhuma opção

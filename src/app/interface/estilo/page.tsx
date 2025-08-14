@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { useState } from "react";
 import StatusSelect from '../../../components/select';
+import { useInterfaceConfig } from "../interface-config";
 
 const OPTIONS = [
 	{ label: 'Arial', value: 'arial' },
@@ -11,14 +12,14 @@ const OPTIONS = [
 ];
 
 const OPTIONS2 = [
-	{ label: 'Pequeno (14px)', value: 'pequeno' },
-	{ label: 'Médio (16px)', value: 'medio' },
-	{ label: 'Grande (20px)', value: 'grande' },
-	{ label: 'Extra Grande (24px)', value: 'extraGrande' },
+	{ label: 'Pequeno (14px)', value: '14' },
+	{ label: 'Médio (16px)', value: '16' },
+	{ label: 'Grande (20px)', value: '20' },
+	{ label: 'Extra Grande (24px)', value: '24' },
 ];
 
-export default function Estilo () {
-  const [color, setColor] = useState("#1E40AF")
+export default function Estilo() {
+	const { fontKey, setFontKey, color, setColor, fontSizePx, setFontSizePx } = useInterfaceConfig()
 	return (
 		<div className='flex flex-col gap-3'>
 			<div className='flex gap-4 mt-3'>
@@ -27,12 +28,18 @@ export default function Estilo () {
 					label='Fonte'
 					options={OPTIONS}
 					defaultValue='arial'
+					value={fontKey}
+					onChangeValueAction={(v) => setFontKey(v as any)}
 				/>
 				<StatusSelect
 					name='tamanhoDaFonte'
 					label='Tamanho da Fonte'
 					options={OPTIONS2}
-					defaultValue='pequeno'
+					value={String(fontSizePx)}
+					onChangeValueAction={(v) => {
+						const n = Number(v);
+						if (!Number.isNaN(n)) setFontSizePx(n); // <-- grava no Context
+					}}
 				/>
 			</div>
 
