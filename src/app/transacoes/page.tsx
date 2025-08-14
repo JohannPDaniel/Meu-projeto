@@ -1,7 +1,5 @@
-import { AppLayout } from "../../components/appLayout";
+import { redirect } from "next/navigation";
 
 export default function Transacoes() {
-	return (
-		<AppLayout>Transações</AppLayout>
-	);
+	redirect('/transacoes/transactions');
 }

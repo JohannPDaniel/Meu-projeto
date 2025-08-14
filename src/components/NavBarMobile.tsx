@@ -35,7 +35,7 @@ export const NavBarMobile = () => {
 		{ icon: Home, href: '/dashboard' },
 		{ icon: Building2, href: '/clientes/lista' },
 		{ icon: Monitor, href: '/terminais/cadastrados' },
-		{ icon: Palette, href: '/interface' },
+		{ icon: Palette, href: '/interface/mensagem' },
 		{ icon: CreditCard, href: '/transacoes' },
 	];
 

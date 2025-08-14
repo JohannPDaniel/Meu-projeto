@@ -51,7 +51,7 @@ export const NavBar = () => {
 			icon: CreditCard,
 			title: 'Transações',
 			paragraphy: 'Pagamentos e logs',
-			href: '/transacoes',
+			href: '/transacoes/transactions',
 		},
 		{
 			icon: CheckCircle,
