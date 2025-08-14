@@ -22,7 +22,7 @@ export default function Estilo() {
 	const { fontKey, setFontKey, color, setColor, fontSizePx, setFontSizePx } = useInterfaceConfig()
 	return (
 		<div className='flex flex-col gap-3'>
-			<div className='flex gap-4 mt-3'>
+			<div className='flex xss:flex-col md:flex-row gap-4 mt-3'>
 				<StatusSelect
 					name='fonte'
 					label='Fonte'

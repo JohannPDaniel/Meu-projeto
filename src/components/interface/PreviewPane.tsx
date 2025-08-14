@@ -19,7 +19,7 @@ export function PreviewPane() {
 			<div className='flex flex-col gap-4 bg-[#1d2739] px-5 py-8 rounded-lg'>
 				<div className='flex flex-col items-center gap-3 bg-[#334154] p-5 rounded-lg'>
 					<div className='w-full bg-[#475568] py-3 rounded-sm'></div>
-					<div className='w-80 bg-[#475568] py-2 rounded-sm'></div>
+					<div className='xss:w-30 xs:w-40 sm:w-50 md:w-80 bg-[#475568] py-2 rounded-sm'></div>
 				</div>
 				<div className='flex flex-col gap-1 items-center bg-white py-5 rounded-xl'>
                     <h1
@@ -27,7 +27,7 @@ export function PreviewPane() {
 						className='text-xl text-center font-bold text-blue-800 w-full max-w-[420px] px-2 whitespace-pre-line break-words '>
 						{message.trim() || 'Mensagem aparecerá aqui'}
 					</h1>
-					<p className='text-[14px] text-gray-600'>
+					<p className='text-[14px] xss:text-center text-gray-600'>
 						Insira ou aproxime seu cartão
 					</p>
 				</div>

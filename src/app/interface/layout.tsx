@@ -20,25 +20,25 @@ export default function Clientes({ children }: { children: React.ReactNode }) {
 		<InterfaceConfigProvider>
 			<AppLayout>
 				{/* Cabeçalho fixo */}
-				<div className='flex xss:flex-col xss:gap-4 md:flex-row md:gap-0 items-center justify-between'>
+				<div className='flex xss:flex-col lg:flex-row xss:gap-4'>
 					<div className='w-full'>
-						<h1 className='text-2xl xss:text-center md:text-start font-bold'>
+						<h1 className='text-2xl xss:text-center lg:text-start font-bold'>
 							Interface dos Terminais
 						</h1>
-						<p className='text-sm xss:text-center md:text-start text-gray-500'>
+						<p className='text-sm xss:text-center lg:text-start text-gray-500'>
 							Configuração visual das telas dos terminais
 						</p>
 					</div>
 
-					<div className='flex justify-end gap-4 w-full'>
-						<button className='group flex items-center gap-4 border border-gray-300 py-2 px-4 rounded-xl text-[14px] font-bold cursor-pointer hover:bg-blue-100 hover:text-blue-900 hover:shadow-lg'>
+					<div className='flex xss:flex-col md:flex-row xss:items-center md:justify-center lg:justify-end gap-4 w-full'>
+						<button className='group w-max flex items-center gap-4 border border-gray-300 py-2 px-4 rounded-xl text-[14px] font-bold cursor-pointer hover:bg-blue-100 hover:text-blue-900 hover:shadow-lg'>
 							<Download
 								className='w-5 h-5 group-hover:text-blue-900'
 								strokeWidth={2}
 							/>
 							Exportar Configs
 						</button>
-						<button className='group flex items-center gap-4 py-2 px-4 rounded-xl text-[14px] font-bold cursor-pointer bg-blue-900 text-white transition-all duration-300 ease-in-out hover:-translate-y-1'>
+						<button className='group w-max flex items-center gap-4 py-2 px-4 rounded-xl text-[14px] font-bold cursor-pointer bg-blue-900 text-white transition-all duration-300 ease-in-out hover:-translate-y-1'>
 							<Rocket
 								className='w-5 h-5 text-white'
 								strokeWidth={2}
@@ -49,7 +49,7 @@ export default function Clientes({ children }: { children: React.ReactNode }) {
 				</div>
 
 				{/* Abas/botões fixos */}
-				<div className='flex gap-4'>
+				<div className='flex xss:flex-col xl:flex-row gap-4'>
 					<div className='max-h-fit flex flex-col flex-2 gap-3 border border-gray-300 p-6 rounded-xl'>
 						<div className='flex items-center gap-3'>
 							<Settings
@@ -109,7 +109,7 @@ export default function Clientes({ children }: { children: React.ReactNode }) {
 					<div className='flex flex-col flex-1 gap-4'>
 
 						<PreviewPane />
-						
+
 						<div className='flex flex-col gap-3 border border-gray-300 p-6 rounded-xl'>
 							<div className='flex items-center gap-3'>
 								<Rocket
