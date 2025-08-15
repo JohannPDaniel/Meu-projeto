@@ -19,7 +19,9 @@ export default function Configuracoes () {
 	const [ativo, setAtivo] = useState(true);
 	return (
 		<AppLayout>
-			<h1 className='text-2xl xss:text-center md:text-start font-bold'>Configurações do Sistema</h1>
+			<h1 className='text-2xl xss:text-center md:text-start font-bold'>
+				Configurações do Sistema
+			</h1>
 
 			<div className='grid lg:grid-cols-2 gap-4'>
 				<div className='flex flex-col gap-4 border border-gray-300 rounded-xl p-6'>
@@ -30,12 +32,14 @@ export default function Configuracoes () {
 						label='Moeda padrão'
 						options={OPTIONS}
 						defaultValue='BRL'
+						className='rounded-xl'
 					/>
 					<StatusSelect
 						name='timeZone'
 						label='Fuso Horário'
 						options={OPTIONS2}
 						defaultValue='America/Sao_Paulo'
+						className='rounded-xl'
 					/>
 
 					<VigenciaInput

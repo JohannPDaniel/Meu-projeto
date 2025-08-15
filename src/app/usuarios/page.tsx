@@ -76,6 +76,7 @@ export default function Usuarios() {
 								label='Status'
 								options={OPTIONS}
 								defaultValue='ativo'
+								className="rounded-xl"
 							/>
 						</div>
 						<div className='flex xss:flex-col lg:flex-row gap-4'>
