@@ -77,7 +77,7 @@ export default function StatusSelect({
 				<div className='relative w-full'>
 					<Listbox.Button
 						id={id}
-						className='relative w-full cursor-default rounded-xl border border-gray-300 bg-white py-2 pl-3 pr-10 text-left text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500'>
+						className={`'relative w-full cursor-default ${className} border border-gray-300 bg-white py-2 pl-3 pr-10 text-left text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500'`}>
 						{selected ? (
 							<span className='flex min-w-0 items-center gap-2'>
 								<span className='truncate'>{selected.label}</span>

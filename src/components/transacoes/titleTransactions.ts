@@ -9,6 +9,45 @@ export const titleTransaction = [
 	'Referência',
 ];
 
+export const tableEventos = [
+	'Timestamp',
+	'Terminal',
+	'Evento',
+	'Descrição',
+	'Severidade',
+];
+
+export const contentTbodyEventos = [
+	{
+		timestamp: '2024-01-15 14:35:20',
+		terminal: 'TRM001',
+		evento: 'payment_started',
+		descricao: 'Pagamento iniciado pelo usuário',
+		severidade: 'Info',
+	},
+	{
+		timestamp: '2024-01-15 14:35:22',
+		terminal: 'TRM001',
+		evento: 'payment_completed',
+		descricao: 'Pagamento PIX processado com sucesso',
+		severidade: 'Sucesso',
+	},
+	{
+		timestamp: '2024-01-15 14:20:15',
+		terminal: 'TRM002',
+		evento: 'connection_lost',
+		descricao: 'Conexão com servidor perdida',
+		severidade: 'Erro',
+	},
+	{
+		timestamp: '2024-01-15 09:00:00',
+		terminal: 'TRM003',
+		evento: 'terminal_startup',
+		descricao: 'Terminal iniciado com sucesso',
+		severidade: 'Info',
+	},
+];
+
 export const contentTbodyTransaction = [
 	{
 		id: 'TXN001',

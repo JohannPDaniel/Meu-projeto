@@ -46,13 +46,13 @@ export default function Transaction() {
 					name='Todos os Status'
 					defaultValue='todosStatus'
 					value='todosStatus'
-					className='flex-1'
+					className='flex-1 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
 				/>
 				<StatusSelect
 					options={OPTIONS2}
 					defaultValue='todosTipos'
 					value='todosTipos'
-					className='flex-1'
+					className='flex-1 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
 				/>
 
 				<Calendar />
