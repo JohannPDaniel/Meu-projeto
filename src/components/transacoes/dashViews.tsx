@@ -2,12 +2,14 @@ import { LucideIcon } from 'lucide-react';
 
 interface DashViewsProsps {
 	title: string;
+	number: string;
 	icon: LucideIcon;
 	paragraphy: string;
 }
 
 export const DashViews = ({
 	title,
+	number,
 	icon: Icon,
 	paragraphy,
 }: DashViewsProsps) => {
@@ -16,7 +18,7 @@ export const DashViews = ({
 			<h3 className='text-[14px] text-gray-600 font-bold'>{title}</h3>
 
 			<div className='flex flex-col'>
-				<h1 className='text-2xl font-bold'>4</h1>
+				<h1 className='text-2xl font-bold'>{number}</h1>
 				<small className='flex items-center gap-2 text-[12px] text-green-500'>
 					<Icon
 						size={14}
