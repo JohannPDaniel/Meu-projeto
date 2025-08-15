@@ -19,10 +19,10 @@ export default function Clientes({ children }: { children: React.ReactNode }) {
 	return (
 		<AppLayout>
 			{/* Cabeçalho fixo */}
-			<div className='flex items-center justify-between'>
+			<div className='flex xss:flex-col xss:gap-4 items-center justify-between'>
 				<div>
-					<h1 className='text-3xl font-bold'>Transações & Logs</h1>
-					<p className='text-md text-gray-500'>
+					<h1 className='text-3xl xss:text-center font-bold'>Transações & Logs</h1>
+					<p className='text-md xss:text-center text-gray-500'>
 						Monitoramento de pagamentos e eventos do sistema
 					</p>
 				</div>
@@ -38,7 +38,7 @@ export default function Clientes({ children }: { children: React.ReactNode }) {
 				</div>
 			</div>
 
-			<div className='grid grid-cols-4 gap-3'>
+			<div className='grid md:grid-cols-2 xl:grid-cols-4 gap-3'>
 				<DashViews
 					title='Total de Transações'
 					number='4'

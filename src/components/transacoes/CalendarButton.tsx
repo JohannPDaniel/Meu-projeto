@@ -83,11 +83,11 @@ export default function CalendarButton() {
 		);
 
 	return (
-		<div className='relative inline-block'>
+		<div className='relative'>
 			{/* Botão */}
 			<button
 				onClick={() => setOpen((v) => !v)}
-				className='flex items-center gap-2 text-[14px] font-bold border border-gray-300 px-4 py-2 rounded-xl shadow-sm hover:bg-blue-100 hover:text-blue-900 bg-white cursor-pointer'>
+				className='flex xss:w-full items-center justify-center gap-2 text-[14px] font-bold border border-gray-300 px-4 py-2 rounded-xl shadow-sm hover:bg-blue-100 hover:text-blue-900 bg-white cursor-pointer'>
 				<CalendarIcon size={18} />
 				<span>
 					{selected
