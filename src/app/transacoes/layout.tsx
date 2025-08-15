@@ -19,19 +19,19 @@ export default function Clientes({ children }: { children: React.ReactNode }) {
 	return (
 		<AppLayout>
 			{/* Cabeçalho fixo */}
-			<div className='flex xss:flex-col xss:gap-4 items-center justify-between'>
+			<div className='flex xss:flex-col lg:flex-row xss:gap-4 items-center justify-between'>
 				<div>
-					<h1 className='text-3xl xss:text-center font-bold'>Transações & Logs</h1>
-					<p className='text-md xss:text-center text-gray-500'>
+					<h1 className='text-3xl xss:text-center lg:text-start font-bold'>Transações & Logs</h1>
+					<p className='text-md xss:text-center lg:text-start text-gray-500'>
 						Monitoramento de pagamentos e eventos do sistema
 					</p>
 				</div>
-				<div className='flex gap-3'>
-					<button className='flex items-center gap-2 border border-gray-300 px-3 py-2 rounded-xl text-[14px] font-bold hover:bg-blue-100 hover:text-blue-900 hover:shadow-lg cursor-pointer'>
+				<div className='flex xss:flex-col lg:flex-row xss:w-full md:w-max gap-3'>
+					<button className='flex xss:justify-center items-center gap-2 border border-gray-300 px-3 py-2 rounded-xl text-[14px] font-bold hover:bg-blue-100 hover:text-blue-900 hover:shadow-lg cursor-pointer'>
 						<Funnel className='w-4 h-4 hover:text-blue-900' />
 						Filtros Avançados
 					</button>
-					<button className='flex items-center gap-2 px-4 py-2 rounded-xl text-[14px] font-bold cursor-pointer bg-blue-900 text-white transition-all duration-300 ease-in-out hover:-translate-y-1'>
+					<button className='flex xss:justify-center items-center gap-2 px-4 py-2 rounded-xl text-[14px] font-bold cursor-pointer bg-blue-900 text-white transition-all duration-300 ease-in-out hover:-translate-y-1'>
 						<Download className='w-4 h-4 text-white ' />
 						Exportar Dados
 					</button>
